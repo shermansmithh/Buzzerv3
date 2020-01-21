@@ -1,15 +1,23 @@
-<!--
-  Generated template for the LoginPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-  <ion-navbar>
-    <ion-title>login</ion-title>
-  </ion-navbar>
-</ion-header>
-
 <ion-content padding>
+  <div layout vertical center>
+    <ion-slides #slides pager flex>
+      <ion-slide *ngFor="let slide of introSlides">
+        <h3 class="font-thin" [innerHTML]="slide.title"></h3>
+        <img [src]="slide.image">
+      </ion-slide>
+    </ion-slides>
 
+    <div class="text-center">
+      <div>
+        <button ion-button round class="btn-buzzer-login m-b-sm" (click)="facebookLogin()">LOG IN WITH FACEBOOK</button>
+      </div>
+      <div class="wrapper text-muted">
+        <p>We don't post anything to Facebook.
+          <br>
+          By signing in, you agree to our <span class="text-u-l">Terms of Service</span> and <span class="text-u-l">Privacy Policy</span>
+        </p>
+      </div>
+    </div>
+  </div>
 </ion-content>
+

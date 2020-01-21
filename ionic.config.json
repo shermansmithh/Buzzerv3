@@ -1,5 +1,7 @@
 {
   "name": "Buzzer3",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }
